@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./index.css";
 const App = () => {
   const [produtos, setProdutos] = useState([]);
 
@@ -19,13 +20,20 @@ const App = () => {
   /* console.log(produtos); Testando */
 
   return (
-    <div>
-      <ul>
-        {produtos.map(({ id, title, price }) => {
-          <li key={id}></li>;
-        })}
-      </ul>
-    </div>
+    <>
+    <h1>Exercício 2</h1>
+    <section>
+      {produtos.map( (id, title, price, image) => {
+        <div key={id}>
+          <h2>{title}</h2>
+        <p> 
+          <img class="foto" src={image} alt="foto dos produtos" />
+        </p>
+          <p>{price}</p>
+        </div>
+      })}
+    </section>
+    </>
   );
 };
 export default App;

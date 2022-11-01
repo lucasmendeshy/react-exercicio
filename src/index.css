@@ -25,3 +25,29 @@ h2,
 h3 {
   font-family: "Fjalla One", sans-serif;
 }
+
+h2 {
+  text-align: center;
+}
+
+p, h1 {
+  text-align: center;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+.foto {
+  object-fit: contain;
+  object-position: center;
+  height: 100px;
+  width: 100px;
+}
