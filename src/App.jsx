@@ -1,4 +1,8 @@
 const App = () => {
-  return <div>App</div>;
+  return (
+    <section>
+      <h1>Template zerado!</h1>
+    </section>
+  );
 };
 export default App;
