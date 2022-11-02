@@ -23,7 +23,8 @@ const App = () => {
     <>
     <h1>Exercício 2</h1>
     <section>
-      {produtos.map( (id, title, price, image) => {
+      <article>
+      {produtos.map(({id, title, price, image}) => (
         <div key={id}>
           <h2>{title}</h2>
         <p> 
@@ -31,7 +32,8 @@ const App = () => {
         </p>
           <p>{price}</p>
         </div>
-      })}
+      ))}
+      </article>
     </section>
     </>
   );
