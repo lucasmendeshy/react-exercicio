@@ -28,7 +28,10 @@ const App = () => {
 
   return (
     <>
-      <h1>Exercício 2</h1>
+      <header>
+        <h1>Exercício 2</h1>
+      </header>
+
       <section>
         {produtos.map(({ id, title, price, image }) => (
           <article className="teste">
