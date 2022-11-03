@@ -39,6 +39,7 @@ section {
 }
 
 article {
+  background-color: #f7f7f7;
   border-radius: 10px;
   border: 2px solid black;
   margin: 10px 0px;
