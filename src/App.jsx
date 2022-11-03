@@ -19,22 +19,29 @@ const App = () => {
   }, []);
   /* console.log(produtos); Testando */
 
+  const formataMoeda = (formata) => {
+    return formata.toLocaleString("pt-br", {
+      style: "currency",
+      currency: "BRL",
+    });
+  };
+
   return (
     <>
-    <h1>Exercício 2</h1>
-    <section>
-      <article>
-      {produtos.map(({id, title, price, image}) => (
-        <div key={id}>
-          <h2>{title}</h2>
-        <p> 
-          <img class="foto" src={image} alt="foto dos produtos" />
-        </p>
-          <p>{price}</p>
-        </div>
-      ))}
-      </article>
-    </section>
+      <h1>Exercício 2</h1>
+      <section>
+        {produtos.map(({ id, title, price, image }) => (
+          <article className="teste">
+            <div key={id}>
+              <p>
+                <img className="foto" src={image} alt="foto dos produtos" />
+              </p>
+              <h2>{title}</h2>
+              <p>{formataMoeda(price)}</p>
+            </div>
+          </article>
+        ))}
+      </section>
     </>
   );
 };
